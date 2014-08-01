@@ -142,3 +142,6 @@ alias reload="exec $SHELL -l"
 
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
+
+alias cddotfiles="cd ~/src/dirkkelly/dotfiles"
+alias cdapp="cd ~/src/interexchange/app"
