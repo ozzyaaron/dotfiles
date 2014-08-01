@@ -145,3 +145,8 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 
 alias cddotfiles="cd ~/src/dirkkelly/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
+
+alias be="bundle exec"
+alias bespec="bundle exec rspec"
+
+alias resource=". ~/.bash_profile"
