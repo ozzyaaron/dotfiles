@@ -79,7 +79,6 @@ lets you view and cycle through your previous copy and paste registers on the fl
 * [ZoomWin](http://www.vim.org/scripts/script.php?script_id=508) lets you close all other windows with `<C-w>o`.  You can restore all the closed windows with the same command.  Useful with `:tabo` to close everything but what you're working on.
 
 ## Searching
-* [ack](https://github.com/mileszs/ack.vim) lets you shell out to ack within vim using `:Ack pattern [directory]`.  By default, results show up in the quickfix window.  You can use `:AckAdd` to append to the quickfix window or prefix 'Ack' with an 'L' to use the location list (just like `:grep`'s siblings).
 * [ag](https://github.com/epmatsw/ag.vim) is the above but for ag ([a faster ack replacement](https://github.com/ggreer/the_silver_searcher))
 * [vim-abolish](https://github.com/tpope/vim-abolish) deserves a few lines:
     * It replaces `teh` with `the`.  Say hello to autocorrect memes, Ruby edition.  You can define your own with a regex-like syntax.

@@ -35,7 +35,7 @@ install homebrew/dupes/grep
 install homebrew/dupes/screen
 
 # Install other useful binaries
-install ack
+install ag
 install bfg
 install foremost
 install git
