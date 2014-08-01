@@ -54,6 +54,7 @@ install webkit2png
 install qt
 install rbenv
 install ruby-build
+install postgresql
 
 install libxml2 libxslt
 link libxml2 libxslt --force
