@@ -60,7 +60,5 @@ install zopfli
 
 install homebrew/versions/lua52
 
-install rbenv
-
 # Remove outdated versions from the cellar
 cleanup
