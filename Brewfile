@@ -55,6 +55,7 @@ install qt
 install rbenv
 install ruby-build
 install postgresql
+install redis
 
 install libxml2 libxslt
 link libxml2 libxslt --force
