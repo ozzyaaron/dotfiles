@@ -69,7 +69,6 @@ Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
 Plugin 'mgamba/j-split'
 Plugin 'matt-royal/diffthese'
 Plugin 'camelcasemotion'
@@ -151,4 +150,3 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 au BufRead,BufNewFile *.hamlc set ft=haml
-
