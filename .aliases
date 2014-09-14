@@ -147,6 +147,6 @@ alias cddotfiles="cd ~/src/dirkkelly/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
 
 alias be="bundle exec"
-alias bespec="bundle exec rspec"
+alias bespec="bundle exec rspec --order=rand --format=documentation --color --profile --fail-fast"
 
 alias resource=". ~/.bash_profile"
