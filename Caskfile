@@ -11,11 +11,14 @@ cask install google-chrome-canary 2> /dev/null
 cask install iterm2 2> /dev/null
 cask install macvim 2> /dev/null
 cask install pgadmin3 2> /dev/null
+cask install phpstorm 2> /dev/null
+cask install rubymine 2> /dev/null
+cask install sequel-pro 2> /dev/null
 cask install slack 2> /dev/null
 cask install sourcetree 2> /dev/null
 cask install sublime-text 2> /dev/null
-cask install transmit 2> /dev/null
 cask install the-unarchiver 2> /dev/null
 cask install torbrowser 2> /dev/null
 cask install transmission 2> /dev/null
+cask install transmit 2> /dev/null
 cask install vlc 2> /dev/null

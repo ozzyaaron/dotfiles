@@ -35,29 +35,30 @@ install homebrew/dupes/grep
 install homebrew/dupes/screen
 
 # Install other useful binaries
+
 install ag
 install bfg
 install foremost
 install git
 install hashpump
+install libxml2 libxslt
 install lynx
+install mysql
 install nmap
 install p7zip
 install pigz
+install postgresql
 install pv
+install qt
+install rbenv
+install redis
 install rename
 install rhino
+install ruby-build
 install tree
 install ucspi-tcp # `tcpserver` et al.
 install webkit2png
 
-install qt
-install rbenv
-install ruby-build
-install postgresql
-install redis
-
-install libxml2 libxslt
 link libxml2 libxslt --force
 
 # Remove outdated versions from the cellar
