@@ -145,8 +145,16 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 
 alias cddotfiles="cd ~/src/dirkkelly/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
+alias cdauth="cd ~/src/interexchange/auth"
+alias cdpassport="cd ~/src/interexchange/passport"
+alias cdstyleguide="cd ~/src/interexchange/styleguide"
 
 alias be="bundle exec"
 alias bespec="bundle exec rspec --order=rand --format=documentation --color --profile --fail-fast"
 
 alias resource=". ~/.bash_profile"
+
+alias gitwasme="NAME=git config user.name; EMAIL=git config user.email; git commit --amend --author \"$NAME <$EMAIL>\""
+alias gitonwithit="git rebase --continue"
+alias gitwasmegoon="gitwasme && gitonwithit"
+
