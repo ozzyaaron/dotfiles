@@ -159,3 +159,4 @@ alias gitwasme="NAME=git config user.name; EMAIL=git config user.email; git comm
 alias gitonwithit="git rebase --continue"
 alias gitwasmegoon="gitwasme && gitonwithit"
 
+alias pgpiddestroy="rm /usr/local/var/postgres/postmaster.pid"
