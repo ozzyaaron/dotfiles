@@ -160,3 +160,8 @@ alias gitonwithit="git rebase --continue"
 alias gitwasmegoon="gitwasme && gitonwithit"
 
 alias pgpiddestroy="rm /usr/local/var/postgres/postmaster.pid"
+
+gitiam () {
+  `git config --global user.name $1`
+  `git config --global user.email $2`
+}
