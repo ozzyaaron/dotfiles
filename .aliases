@@ -146,9 +146,12 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 alias cddotfiles="cd ~/src/`whoami`/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
 alias cdauth="cd ~/src/interexchange/auth"
+alias cdengineering="cd ~/src/interexchange/engineering.interexchange.org"
 alias cdpassport="cd ~/src/interexchange/passport"
 alias cdstyleguide="cd ~/src/interexchange/styleguide"
 alias cdwww="cd ~/src/interexchange/www"
+
+alias cdcampminder="cd ~/src/interexchange/campminder"
 
 alias be="bundle exec"
 alias bespec="bundle exec rspec --order=rand --format=documentation --color --profile --fail-fast"
@@ -161,7 +164,4 @@ alias gitwasmegoon="gitwasme && gitonwithit"
 
 alias pgpiddestroy="rm /usr/local/var/postgres/postmaster.pid"
 
-gitiam () {
-  `git config --global user.name $1`
-  `git config --global user.email $2`
-}
+alias dbreset="script/db/reset.sh"
