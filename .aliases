@@ -147,9 +147,11 @@ alias cddotfiles="cd ~/src/`whoami`/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
 alias cdauth="cd ~/src/interexchange/auth"
 alias cdengineering="cd ~/src/interexchange/engineering.interexchange.org"
+alias cdorientation="cd ~/src/interexchange/orientation"
 alias cdpassport="cd ~/src/interexchange/passport"
 alias cdstyleguide="cd ~/src/interexchange/styleguide"
-alias cdwww="cd ~/src/interexchange/www"
+alias cdwebsite="cd ~/src/interexchange/website"
+alias cdwebsite-jekyll="cd ~/src/interexchange/website-jekyll"
 
 alias cdcampminder="cd ~/src/interexchange/campminder"
 
@@ -165,3 +167,5 @@ alias gitwasmegoon="gitwasme && gitonwithit"
 alias pgpiddestroy="rm /usr/local/var/postgres/postmaster.pid"
 
 alias dbreset="script/db/reset.sh"
+
+alias foremandev="be foreman start -f Procfile.dev"
