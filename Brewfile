@@ -1,65 +1,35 @@
-# Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
-
-# Make sure we’re using the latest Homebrew
-brew update
-
-# Upgrade any already-installed formulae
-brew upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-# Install some other useful utilities like `sponge`
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`
-brew install gnu-sed --default-names
-# Install Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-brew install bash
-brew install bash-completion
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
-# Install RingoJS and Narwhal
-# Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
-
-# Install more recent versions of some OS X tools
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/screen
-
-# Install other useful binaries
-
-brew install ag
-brew install bfg
-brew install foremost
-brew install git
-brew install hashpump
-brew install libxml2 libxslt
-brew install lynx
-brew install mysql
-brew install nmap
-brew install p7zip
-brew install pigz
-brew install postgresql
-brew install pv
-brew install qt
-brew install rbenv
-brew install redis
-brew install rename
-brew install rhino
-brew install ruby-build
-brew install tree
-brew install ucspi-tcp # `tcpserver` et al.
-brew install webkit2png
-
-brew link libxml2 libxslt --force
-
-# Remove outdated versions from the cellar
-brew cleanup
+brew 'coreutils'
+brew 'moreutils'
+brew 'findutils'
+brew 'gnu-sed', args: ['default-names']
+brew 'bash'
+brew 'bash-completion'
+brew 'wget', args: ['enable-iri']
+brew 'ringojs'
+brew 'narwhal'
+brew 'vim', args: ['override-system-vi']
+brew 'homebrew/dupes/grep'
+brew 'homebrew/dupes/screen'
+brew 'ag'
+brew 'bfg'
+brew 'foremost'
+brew 'git'
+brew 'hashpump'
+brew 'libxml2'
+brew 'libxslt'
+brew 'lynx'
+brew 'mysql'
+brew 'nmap'
+brew 'p7zip'
+brew 'pigz'
+brew 'postgresql'
+brew 'pv'
+brew 'qt'
+brew 'rbenv'
+brew 'redis'
+brew 'rename'
+brew 'rhino'
+brew 'ruby-build'
+brew 'tree'
+brew 'ucspi-tcp'
+brew 'webkit2png'
