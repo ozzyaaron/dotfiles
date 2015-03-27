@@ -87,7 +87,7 @@ brew brewdle
 ```
 
 ```bash
-brew bundle ~/Brewfile
+brew install $(cat Brewfile|grep -v "#")
 ```
 
 ### Install native apps with `brew cask`
@@ -95,7 +95,7 @@ brew bundle ~/Brewfile
 You could also install native apps with [`brew cask`](https://github.com/phinze/homebrew-cask):
 
 ```bash
-brew bundle ~/Caskfile
+brew install $(cat Caskfile|grep -v "#")
 ```
 
 ## Feedback
