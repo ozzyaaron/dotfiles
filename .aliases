@@ -143,15 +143,16 @@ alias reload="exec $SHELL -l"
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
 
-alias cddotfiles="cd ~/src/`whoami`/dotfiles"
 alias cdapp="cd ~/src/interexchange/app"
 alias cdauth="cd ~/src/interexchange/auth"
+alias cddotfiles="cd ~/src/`whoami`/dotfiles"
 alias cdengineering="cd ~/src/interexchange/engineering.interexchange.org"
 alias cdorientation="cd ~/src/interexchange/orientation"
 alias cdpassport="cd ~/src/interexchange/passport"
+alias cdprograms="cd ~/src/interexchange/programs"
 alias cdstyleguide="cd ~/src/interexchange/styleguide"
 alias cdwebsite="cd ~/src/interexchange/website"
-alias cdwebsite-jekyll="cd ~/src/interexchange/website-jekyll"
+alias cdjekyll="cd ~/src/interexchange/website-jekyll"
 
 alias cdcampminder="cd ~/src/interexchange/campminder"
 
