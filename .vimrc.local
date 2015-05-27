@@ -7,6 +7,6 @@ let g:ctrlp_max_depth=40
 
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|node_modules|vendor|public)$',
+  \ 'dir': '\v[\/](\.git|node_modules|vendor|public|third_party)$',
   \ 'file': '\.log$\',
   \ }
