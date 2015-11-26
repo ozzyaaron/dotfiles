@@ -157,3 +157,7 @@
 [url "git://gist.github.com/"]
 
   insteadOf = "gist:"
+
+[user]
+	name = Aaron Todd
+	email = ozzyaaron@gmail.com
