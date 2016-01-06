@@ -1,3 +1,5 @@
+set exrc
+
 set guioptions+=e
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -7,8 +9,10 @@ let g:ctrlp_max_depth=40
 
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|node_modules|vendor|public|third_party)$',
+  \ 'dir': '\v[\/](\.git|node_modules|vendor|third_party)$',
   \ 'file': '\.log$\',
   \ }
 
 set tags+=gems.tags
+
+set secure
