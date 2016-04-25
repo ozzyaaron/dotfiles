@@ -57,3 +57,5 @@ eval "$(direnv hook bash)"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export NODE_VERSION_PREFIX=v
+export NODE_VERSIONS=/Users/atodd/.nvm/versions/node
