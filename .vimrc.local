@@ -1,5 +1,5 @@
 set exrc
-set statusline=%f
+set statusline=%l/%L\ -\ %f\ -\ FileType:\ %y
 
 set guioptions+=e
 
