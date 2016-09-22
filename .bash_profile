@@ -1,6 +1,5 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-export EDITOR=mvim
 
 alias gap="git add -p"
 alias ftail="tail -f -n 500"
