@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export EDITOR=mvim
 
 export GEMNASIUM_TOKEN=4758ae120450387d7f100ef9ea4427ae
 
