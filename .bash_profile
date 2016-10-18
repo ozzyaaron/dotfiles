@@ -1,6 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
 alias gap="git add -p"
 alias ftail="tail -f -n 500"
 
@@ -58,3 +55,6 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export NODE_VERSION_PREFIX=v
 export NODE_VERSIONS=/Users/atodd/.nvm/versions/node
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH:$HOME/.yarn/bin";
