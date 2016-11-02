@@ -48,10 +48,6 @@ Plugin 'flazz/vim-colorschemes'
 "
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'brysgo/test_server'
-Plugin 'jgdavey/vim-blockle'
 
 "
 " General Editing
@@ -79,8 +75,6 @@ Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'YankRing.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
 
@@ -93,8 +87,6 @@ Plugin 'ZoomWin'
 " Searching
 "
 Plugin 'epmatsw/ag.vim'
-Plugin 'tpope/vim-abolish'
-Plugin 'henrik/vim-qargs'
 Plugin 'kien/ctrlp.vim'
 
 "
@@ -111,23 +103,15 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'slim-template/vim-slim'
 Plugin 'nono/vim-handlebars'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-cucumber'
 Plugin 'juvenn/mustache.vim'
 Plugin 'Blackrush/vim-gocode'
-Plugin 'rosstimson/scala-vim-support'
-Plugin 'guns/vim-clojure-static'
 Plugin 'chrisbra/csv.vim'
 
 "
 " Development Tool Integration
 "
 Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'pivotal/tmux-config'
-Plugin 'tpope/vim-dispatch'
-Plugin 'carlobaldassi/ConqueTerm'
 Plugin 'sjl/vitality.vim'
 
 call vundle#end()
