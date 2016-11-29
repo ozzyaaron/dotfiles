@@ -58,3 +58,4 @@ export NODE_VERSIONS=/Users/atodd/.nvm/versions/node
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH:`yarn global bin`";
+eval "$(rbenv init -)"
