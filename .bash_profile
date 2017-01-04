@@ -51,11 +51,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # https://github.com/zimbatm/direnv
 eval "$(direnv hook bash)"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-export NODE_VERSION_PREFIX=v
-export NODE_VERSIONS=/Users/atodd/.nvm/versions/node
-
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH:`yarn global bin`";
 eval "$(rbenv init -)"
+
+source ~/.bashrc
