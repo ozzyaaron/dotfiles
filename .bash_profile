@@ -1,3 +1,8 @@
+function smart_git_push() {
+  git push --set-upstream origin `git symbolic-ref --short HEAD`
+}
+
+alias gpu="smart_git_push" # git push upstream
 alias gap="git add -p"
 alias ftail="tail -f -n 500"
 
