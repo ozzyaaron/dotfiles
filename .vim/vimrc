@@ -1,134 +1,95 @@
-" ----------
-" Vim Config
-" ----------
-"
-"
-" How this works:
-"
-" This file is minimal.  Most of the vim settings and initialization is in
-" several files in .vim/init.  This makes it easier to find things and to
-" merge between branches and repos.
-"
-" Please do not add configuration to this file, unless it *really* needs to
-" come first or last, like Vundle and sourcing the machine-local config.
-" Instead, add it to one of the files in .vim/init, or create a new one.
+" No more backups and swap files. Use git and file writing
+set nobackup
+set noswapfile
 
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set exrc
-au BufWritePost .vimrc so $MYVIMRC " reload new vimrc whenever saved
-
-" Based on http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
-let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/bundle/vundle/autoload/vundle.vim"))
-    echo "Installing Vundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !rm -rf ~/.vim/bundle/vundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let need_to_install_plugins=1
-endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
-
-Plugin 'gmarik/vundle'
-
-"
-" Colorschemes
-"
-Plugin 'tpope/vim-vividchalk'
-Plugin 'chriskempson/base16-vim'
-Plugin 'molokai'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'wgibbs/vim-irblack'
-Plugin 'candycode.vim'
-Plugin 'Color-Sampler-Pack'
-Plugin 'flazz/vim-colorschemes'
-
-"
-" Rails
-"
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'ecomba/vim-ruby-refactoring'
-
-"
-" General Editing
-"
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'kana/vim-textobj-user'
-Plugin 'Julian/vim-textobj-variable-segment'
-Plugin 'kana/vim-textobj-line'
-Plugin 'thinca/vim-textobj-between'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'sjl/gundo.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'scrooloose/syntastic'
-Plugin 'mgamba/j-split'
-Plugin 'matt-royal/diffthese'
-Plugin 'camelcasemotion'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'regreplop.vim'
-Plugin 'Peeja/insert_mode_background_color'
-Plugin 'vim-scripts/L9'
-Plugin 'Peeja/vim-cdo'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'Valloric/YouCompleteMe'
-
-"
-" Window Management
-"
-Plugin 'ZoomWin'
-
-"
-" Searching
-"
-Plugin 'epmatsw/ag.vim'
-Plugin 'kien/ctrlp.vim'
-
-"
-" Navigation
-"
-Plugin 'scrooloose/nerdtree'
-
-"
-" Languages
-"
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nono/vim-handlebars'
-Plugin 'tpope/vim-haml'
-Plugin 'juvenn/mustache.vim'
-Plugin 'chrisbra/csv.vim'
-
-"
-" Development Tool Integration
-"
-Plugin 'tpope/vim-fugitive' " git helpers
-
-call vundle#end()
+" Find filetype and set indent based on filetype rules
+" The plugin keyword allows you to setup some things like
+" indentation by plugin
 filetype plugin indent on
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
 
 syntax on
 
-if need_to_install_plugins == 1
-  echo "Installing plugins via Vundle. Please ignore warnings afterwards."
-  echo "This is a one-time operation that will take about a minute..."
-  silent! PluginInstall
-  echo "Done installing Vundle plugins!"
-  q
-endif
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-runtime! init/**.vim
+" Ctrl-P setup, allow indexing of more things
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.git|node_modules|vendor|third_party)$',
+  \ 'file': '\.log$\',
+  \ }
 
-au BufRead,BufNewFile *.hamlc set ft=haml
-au BufRead,BufNewFile *.smarty set filetype=html
+" Highlight matching parenthesis etc
+set showmatch
+
+" Highlight found words from search and as you type
+set hlsearch
+set incsearch
+
+" Allow search to be ended by pressing Escape
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+" Hide buffer rather than closing it.
+" This will retain undo and marks in the buffer
+set hidden
+
+" Keeps more history of commands etc
+set history=100
+
+" Show line numbers in left gutter
+set number
+
+" Show a colour at column 90
+set colorcolumn=90
+
+" Reload .vimrc by leader + s
+map <leader>s :source ~/.vimrc<CR>
+
+" Automatically remove excess white spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Plugins with vim-plug (https://github.com/junegunn/vim-plug)
+" vim-plug should've been install by the boostrap.sh script
+call plug#begin('~/.vim/plugged')
+  Plug 'altercation/vim-colors-solarized'
+
+  " Ctrl-P searching
+  Plug 'kien/ctrlp.vim'
+
+  " Quickly comment blocks etc
+  Plug 'scrooloose/nerdcommenter'
+
+  " Navigation
+  Plug 'scrooloose/nerdcommenter'
+
+  " Nicer status bar
+  Plug 'itchyny/lightline.vim'
+
+  " Tab autocompletion
+  Plug 'ervandew/supertab'
+
+  " Helpful Git stuff like :Gblame
+  Plug 'tpope/vim-fugitive'
+
+  " Multiple cursor feature
+  Plug 'terryma/vim-multiple-cursors'
+
+  " Rails and Ruby specific stuff
+  Plug 'tpope/vim-rails'
+  "Plug 'tpope/vim-ruby' this doesnt' currently install
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-endwise'
+call plug#end()
+
+" Solarized colourscheme with dark background
+set background=dark
+colorscheme solarized
+

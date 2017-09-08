@@ -1,4 +1,0 @@
-#!/bin/bash
-cd ~/.vim
-rm -rf bundle
-bin/install
