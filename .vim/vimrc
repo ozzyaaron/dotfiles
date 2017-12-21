@@ -89,7 +89,7 @@ Plugin 'ZoomWin'
 " Searching
 "
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 "
 " Navigation
