@@ -160,5 +160,8 @@
   insteadOf = "gist:"
 
 [user]
-	name = Aaron Todd
-	email = ozzyaaron@gmail.com
+  name = Aaron Todd
+  email = ozzyaaron@gmail.com
+
+[rerere]
+  enabled = 1
