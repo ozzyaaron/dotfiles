@@ -5,6 +5,7 @@ function smart_git_push() {
 alias gpu="smart_git_push" # git push upstream
 alias gap="git add -p"
 alias ftail="tail -f -n 500"
+alias wipit="git add -A && git ci -m 'WIP [ci skip]'"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
