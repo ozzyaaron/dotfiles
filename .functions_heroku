@@ -1,0 +1,11 @@
+# hlog <integer> => heroku logs -t -a iex-app-staging-pr-<id>
+# hlog <string> => heroku logs -t -a <string>
+function hlog() {
+  if [ $1 -eq $1 2> /dev/null ]; then
+    echo heroku logs -t -a iex-app-staging-pr-$1
+    heroku logs -t -a iex-app-staging-pr-$1
+  else
+    echo heroku logs -t -a $1
+    heroku logs -t -a $1
+  fi
+}
