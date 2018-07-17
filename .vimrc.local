@@ -29,3 +29,5 @@ set tags+=gems.tags
 set secure
 
 let g:syntastic_ruby_rubocop_args = '--force-exclusion'
+
+set colorcolumn=100
