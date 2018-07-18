@@ -9,3 +9,15 @@ function hlog() {
     heroku logs -t -a $1
   fi
 }
+
+# hrc <integer> => heroku run rails c -a iex-app-staging-pr-<id>
+# hrc <string> => heroku run rails c -a <string>
+function hrc() {
+  if [ $1 -eq $1 2> /dev/null ]; then
+    echo heroku run rails c -a iex-app-staging-pr-$1
+    heroku run rails c -a iex-app-staging-pr-$1
+  else
+    echo heroku run rails c -a $1
+    heroku run rails c -a $1
+  fi
+}
