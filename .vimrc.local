@@ -31,3 +31,6 @@ set secure
 let g:syntastic_ruby_rubocop_args = '--force-exclusion'
 
 set colorcolumn=100
+
+" https://github.com/Valloric/YouCompleteMe/issues/3062
+silent! py3 pass
