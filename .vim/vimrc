@@ -77,7 +77,7 @@ Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 
 "
 " Window Management
