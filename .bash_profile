@@ -57,9 +57,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # https://github.com/zimbatm/direnv
 eval "$(direnv hook bash)"
 
-# Add `~/bin` and Postgres 9.6 (for now) to the `$PATH`
 export PATH="$HOME/bin:$PATH:`yarn global bin`";
-export PATH="$PATH:/usr/local/opt/postgresql@9.6/bin"
 
 eval "$(rbenv init -)"
 
