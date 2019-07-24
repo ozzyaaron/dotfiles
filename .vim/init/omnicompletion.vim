@@ -15,3 +15,20 @@ if has("autocmd") && exists("+omnifunc")
     \   setlocal omnifunc=syntaxcomplete#Complete |
     \ endif
 endif
+
+imap <Tab> <C-P>
+set complete=.,b,u,]
+set wildmode=longest,list:longest
+set completeopt=menu,preview
+
+" Don't omnicomplete at start of line, don't omnicomplete unless in a word
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
