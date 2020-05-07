@@ -77,7 +77,6 @@ Plugin 'vim-scripts/L9'
 Plugin 'Peeja/vim-cdo'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-" Plugin 'ycm-core/YouCompleteMe'
 
 "
 " Window Management
@@ -88,7 +87,10 @@ Plugin 'ZoomWin'
 " Searching
 "
 Plugin 'mileszs/ack.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+
+" Give FZF access to Homebrew version
+set rtp+=/usr/local/opt/fzf
+Plugin 'junegunn/fzf.vim'
 
 "
 " Navigation
@@ -98,12 +100,7 @@ Plugin 'scrooloose/nerdtree'
 "
 " Languages
 "
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nono/vim-handlebars'
-Plugin 'tpope/vim-haml'
-Plugin 'juvenn/mustache.vim'
-Plugin 'chrisbra/csv.vim'
+Plugin 'sheerun/vim-polyglot'
 
 "
 " Development Tool Integration
