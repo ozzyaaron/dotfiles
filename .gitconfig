@@ -165,3 +165,6 @@
 
 [rerere]
   enabled = 1
+
+[pull]
+  ff = only
