@@ -63,5 +63,10 @@ eval "$(rbenv init -)"
 
 source ~/.bashrc
 
+# Increase file open limit mostly so that some Ruby things work like Capybara
+# which would get errors like
+#   Too many open files - socket(2) for "127.0.0.1" port 9515) (Errno::EMFILE)
+ulimit -n 1024
+
 # Add tab completion for many Bash commands
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
