@@ -16,7 +16,7 @@ alias gpull="git pull"
 alias gpush="git push"
 alias h="history"
 alias j="jobs"
-alias gdm='git branch master --merged | grep -v "\\*\\|master" | xargs -n 1 git branch -d'
+alias gdm='git branch --merged master | grep -v "\\*\\|master" | xargs -n 1 git branch -d'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
