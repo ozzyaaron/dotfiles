@@ -7,16 +7,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias g="git"
 alias gpull="git pull"
 alias gpush="git push"
-alias h="history"
-alias j="jobs"
 alias gdm='git branch --merged master | grep -v "\\*\\|master" | xargs -n 1 git branch -d'
+alias gpu="smart_git_push" # git push upstream
+alias gap="git add -p"
+alias ftail="tail -f -n 500"
+alias wipit="git add -A && git ci -m 'WIP [ci skip]'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
