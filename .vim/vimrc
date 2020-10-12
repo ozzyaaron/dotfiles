@@ -37,13 +37,14 @@ Plugin 'gmarik/vundle'
 "
 " Colorschemes
 "
-Plugin 'tpope/vim-vividchalk'
-Plugin 'chriskempson/base16-vim'
-Plugin 'molokai'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'wgibbs/vim-irblack'
-Plugin 'candycode.vim'
-Plugin 'Color-Sampler-Pack'
+" Plugin 'tpope/vim-vividchalk'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'molokai'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'wgibbs/vim-irblack'
+" Plugin 'candycode.vim'
+" Plugin 'Color-Sampler-Pack'
+Plugin 'morhetz/gruvbox'
 
 "
 " Rails
@@ -51,7 +52,7 @@ Plugin 'Color-Sampler-Pack'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
-Plugin 'ecomba/vim-ruby-refactoring'
+" Plugin 'ecomba/vim-ruby-refactoring'
 
 "
 " General Editing
@@ -59,29 +60,31 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'kana/vim-textobj-user'
-Plugin 'Julian/vim-textobj-variable-segment'
-Plugin 'kana/vim-textobj-line'
-Plugin 'thinca/vim-textobj-between'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'sjl/gundo.vim'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'Julian/vim-textobj-variable-segment'
+" Plugin 'kana/vim-textobj-line'
+" Plugin 'thinca/vim-textobj-between'
+" Plugin 'tpope/vim-unimpaired'
+" Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'mgamba/j-split'
-Plugin 'matt-royal/diffthese'
-Plugin 'camelcasemotion'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'dense-analysis/ale'
+" Plugin 'mgamba/j-split'
+" Plugin 'matt-royal/diffthese'
+" Plugin 'camelcasemotion'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'regreplop.vim'
-Plugin 'Peeja/insert_mode_background_color'
-Plugin 'vim-scripts/L9'
-Plugin 'Peeja/vim-cdo'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+" Plugin 'regreplop.vim'
+" Plugin 'Peeja/insert_mode_background_color'
+" Plugin 'vim-scripts/L9'
+" Plugin 'Peeja/vim-cdo'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+Plugin 'mattn/emmet-vim'
 
 "
 " Window Management
 "
-Plugin 'ZoomWin'
+" Plugin 'ZoomWin'
 
 "
 " Searching
@@ -100,6 +103,7 @@ Plugin 'scrooloose/nerdtree'
 "
 " Languages
 "
+" Plugin 'neoclide/coc.nvim'
 Plugin 'sheerun/vim-polyglot'
 
 "
@@ -128,3 +132,6 @@ endif
 
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufRead,BufNewFile *.smarty set filetype=html
+
+" For gruvbox
+autocmd vimenter * colorscheme gruvbox
