@@ -28,5 +28,5 @@ export MANPAGER="less -X";
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
-# Disable warnings for Ruby 2.7.x
-# export RUBYOPT='-W:no-deprecated -W:no-experimental'
+# Enable warnings for Ruby 2.7.2
+export RUBYOPT='-W:deprecated -W:experimental'
