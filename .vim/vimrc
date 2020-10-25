@@ -19,78 +19,77 @@ filetype off                   " required!
 set exrc
 au BufWritePost .vimrc so $MYVIMRC " reload new vimrc whenever saved
 
-" Based on http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+filetype plugin indent on
+
 let need_to_install_plugins=0
-if empty(system("grep lazy_load ~/.vim/bundle/vundle/autoload/vundle.vim"))
-    echo "Installing Vundle..."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !rm -rf ~/.vim/bundle/vundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let need_to_install_plugins=1
+
+" Install vim-plug as needed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  echo "Installing vim-plug..."
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+
+  let need_to_install_plugins=1
 endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
 
-Plugin 'gmarik/vundle'
+" install plugins via vim-plug
+call plug#begin('~/.vim/plugged')
 
-"
 " Colorschemes
 "
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 "
 " Rails
 "
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
 
 "
 " General Editing
 "
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'godlygeek/tabular'
-Plugin 'dense-analysis/ale'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'mattn/emmet-vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'godlygeek/tabular'
+Plug 'dense-analysis/ale'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'mattn/emmet-vim'
 
 " Searching
 "
-Plugin 'mileszs/ack.vim'
-
-" Give FZF access to Homebrew version
-set rtp+=/usr/local/opt/fzf
-Plugin 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 "
 " Navigation
 "
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 "
 " Languages
 "
-" Plugin 'neoclide/coc.nvim'
-Plugin 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'sheerun/vim-polyglot'
 
 "
 " Development Tool Integration
 "
-Plugin 'tpope/vim-fugitive' " git helpers
+Plug 'tpope/vim-fugitive'
 
-call vundle#end()
-filetype plugin indent on
+" Initialize plugin system
+call plug#end()
 
 syntax on
 
 if need_to_install_plugins == 1
-  echo "Installing plugins via Vundle. Please ignore warnings afterwards."
+  echo "Installing VIM plugins. Please ignore warnings afterwards."
   echo "This is a one-time operation that will take about a minute..."
   silent! PluginInstall
-  echo "Done installing Vundle plugins!"
+  echo "Done installing VIM plugins!"
   q
 endif
 
