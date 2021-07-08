@@ -3,6 +3,9 @@ let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ }
 
+" Only run linters defined rather than any that ALE thinks should be used
+let g:ale_linters_explicit = 1
+
 function! LinterStatus() abort
   let l:counts = ale#statusline#Count(bufnr(''))
 
