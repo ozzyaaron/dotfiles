@@ -36,7 +36,7 @@ function hps() {
 
 # hrst <integer> => heroku restart -a iex-app-staging-pr-<id>
 # hrst <string> => heroku restart -a <string>
-function hps() {
+function hrst() {
   if [ $1 -eq $1 2> /dev/null ]; then
     echo heroku restart -a iex-app-staging-pr-$1
     heroku restart -a iex-app-staging-pr-$1
@@ -48,7 +48,7 @@ function hps() {
 
 # hrconf <integer> => heroku config -a iex-app-staging-pr-<id>
 # hrconf <string> => heroku config -a <string>
-function hps() {
+function hrconf() {
   if [ $1 -eq $1 2> /dev/null ]; then
     echo heroku config -a iex-app-staging-pr-$1
     heroku config -a iex-app-staging-pr-$1
